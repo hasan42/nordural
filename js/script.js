@@ -39,14 +39,17 @@ $(document).mouseup(function (e){ // событие клика по веб-до�
 });*/
 
 $(document).ready(function(){
-		//slider index
-	  $('.banner-wrap').slick({
-        infinite: true,
+	//slider index
+	$('.banner-wrap').slick({
+		infinite: true,
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		dots: true,
 		arrows: false
-      });
+	});
+	
+	//gallery
+	$(".fancybox").fancybox();
 	  
 	  //paralax
 	$('div[data-type="background"]').each(function(){
@@ -61,15 +64,15 @@ $(document).ready(function(){
     });
 	
 	//menu second lvl width
-	var widthMenuSLA;
+	/*var widthMenuSLA;
 	widthMenuSLA = 0;
 	$('ul.second-menu li.active ul li').each(function(){
         var widthMenuSL = $(this).outerWidth();
 		widthMenuSLA = widthMenuSLA + widthMenuSL;
     });
-	$('ul.second-menu li.active ul').width(widthMenuSLA+24);
+	$('ul.second-menu li.active ul').width(widthMenuSLA+24);*/
 	
-	if ( $(this).children('ul').length > 0 ) $('ul.second-menu > li.active').css({ marginBottom: 32 });
+	/*if ( $(this).children('ul').length > 0 ) $('ul.second-menu > li.active').css({ marginBottom: 32 });*/
 	
 	//menu second lvl position
 	/*$('ul.second-menu > li.active').each(function(){
@@ -97,7 +100,7 @@ $(document).ready(function(){
 		$('.s-menu-act-block div.s-menu-act-element[rel="' + clickThisId + '"]').fadeIn(200);/
 	});*/
 	
-	$('ul.second-menu > li').mouseenter(function() {
+	/*$('ul.second-menu > li').mouseenter(function() {
 			
 			if ( $(this).children('ul').length > 0 ) {
 				$('ul.second-menu li ul').stop(true, false).fadeOut(100);
@@ -119,10 +122,9 @@ $(document).ready(function(){
 			$('ul.second-menu li ul').stop(true, false).fadeOut(100);
 			$('ul.second-menu li').css({ marginBottom: 0 });
 		}
-	});
+	});*/
 	
 	
-	$(".fancybox").fancybox();
 	
 });
 

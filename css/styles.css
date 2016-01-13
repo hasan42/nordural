@@ -180,6 +180,7 @@ a {
 	display:inline-block;
 	vertical-align:top;
 	padding: 5px 8px;
+	position:relative;
 }
 .second-menu li.tm-inside {
 	padding: 5px 20px 5px 8px;
@@ -204,20 +205,25 @@ a {
 	position:absolute;
 	border:1px solid #448ccb;
 	padding:0;
-	width:inherit;
-	left:30px;
+	min-width:100%;
+	left:0px;
 	margin-top: 5px;
+	background:#fff;
+	z-index:100;
+}
+.second-menu li:hover ul {
+	display:block;
 }
 .second-menu li ul li {
 }
 .second-menu li ul li a {
 }
-.second-menu li.active ul {
+/*.second-menu li.active ul {
 	display:block;
-}
+}*/
 .second-menu li ul li {
 	list-style-type: none;
-	display:inline-block;
+	display:block;
 	vertical-align:top;
 	padding: 5px 8px;
 	position:relative;
