@@ -1,0 +1,622 @@
+﻿/* ---------------- ------- --------------------- */
+body {
+    font: 14px 'Roboto Condensed', Arial, sans-serif;
+    color:#000;
+    line-height: 1.4;
+	background:#fff;
+}
+
+h1 {
+	font-size:32px;
+	font-weight:400;
+	text-align:center;
+}
+h2 {
+	font-size:24px;
+	font-weight:400;
+	text-align:center;
+}
+h3 {
+	font-size:18px;
+	font-weight:400;
+}
+h1 a span, h2 a span, h3 a span {
+	text-transform:uppercase;
+	font-size:14px;
+}
+a {
+	color:#448ccb;
+	text-decoration:underline;
+}
+/* ---------------- ------- --------------------- */
+
+
+/* ---------------- header ---------------------- */
+
+.header-wrap {
+	position:absolute;
+	top:0;
+	z-index:100;
+	width:100%;
+	padding-top:15px;
+}
+.menu {
+	padding:0;
+	text-align:right;
+}
+.menu li {
+	display:inline-block;
+	padding:7px 10px;
+	position:relative;
+}
+.menu li a {
+	color:#fff;
+	font-size:18px;
+	text-decoration:none;
+}
+.menu li:hover .s-menu {
+	display:block;
+}
+
+.s-menu {
+	background:rgba(0,0,0,.7);
+	position:absolute;
+	top:40px;
+	left:0;
+	display:none;
+}
+.s-menu.tour {
+	left:-300px;
+}
+.s-menu-list-block {
+	display:table-cell;
+	vertical-align:top;
+}
+.s-menu-list-block ul {
+	padding:0;
+	width:670px;
+	display:block;
+}
+.s-menu-list-block ul li {
+	width:25%;
+	display:block;
+	float:left;
+	text-align:left;
+}
+.s-menu-list-block ul li:hover {
+	background:#448ccb;
+}
+.s-menu-list-block ul li:hover a {
+	color:#fff;
+}
+.s-menu-list-block ul li a {
+	font-size:14px;
+}
+.s-menu-act-block {
+	display:table-cell;
+	vertical-align:top;
+	color:#fff;
+	text-align:left;
+	padding:0 20px 20px;
+}
+.s-menu-act-element {
+	width:230px;
+	display:none;
+}
+.s-menu-act-element[rel="1"] {
+	display:block;
+}
+.s-menu-act-element img {
+	width:100%;
+}
+.s-menu-act-element h3 a {
+	color:#448ccb;
+	text-decoration:underline;
+}
+.s-menu-act-element .price {
+	background:#448ccb;
+	width:100%;
+	color:#fff;
+	text-align:center;
+}
+.s-menu-act-element .price span {
+	font-weight:bold;
+	font-size:22px;
+}
+.s-menu-act-element .time, .s-menu-act-element .path, .s-menu-act-element .water, .s-menu-act-element .foot {
+	position:relative;
+	margin:5px 0;
+	padding-left:30px;
+	color:#fff;
+}
+.s-menu-act-element .time:before, .s-menu-act-element .path:before, .s-menu-act-element .water:before, .s-menu-act-element .foot:before {
+	position:absolute;
+	left:0px;
+	width:20px;
+	height:20px;
+}
+.s-menu-act-element .time:before {
+	content: url("/images/ico-time.png");
+}
+.s-menu-act-element .path:before {
+	content: url("/images/ico-path.png");
+}
+.s-menu-act-element .water:before {
+	content: url("/images/ico-water.png");
+}
+.s-menu-act-element .foot:before {
+	content: url("/images/ico-foot.png");
+}
+
+.s-menu > ul {
+	text-align:left;
+	padding:0;
+}
+.s-menu > ul li {
+	display:block;
+	float:inherit;
+}
+.s-menu > ul li a {
+	font-size:14px;
+	text-align:left;
+}
+.s-menu > ul li:hover {
+	background:#448ccb;
+}
+.s-menu > ul li:hover a {
+	color:#fff;
+}
+
+
+/* ---------------- /header --------------------- */
+
+
+/* ---------------- content ---------------------- */
+
+
+.banner-wrap {
+	z-index:20;
+}
+.banner-wrap a {
+	text-decoration:none;
+}
+.banner-wrap .banner-element {
+	height:570px;
+}
+.banner-element .info {
+	color:#fff;
+	text-decoration:none;
+	margin:0 auto;
+	max-width:700px;
+	padding-top: 180px;
+	font-size:24px;
+	text-align:center;
+}
+.banner-element .info span {
+	font-size:44px;
+	font-weight:bold;
+}
+
+
+
+.mountain-wrap {
+	background:url('/images/mountain.png') center repeat-x;
+	height:205px;
+	margin-bottom: -200px;
+    position: relative;
+    top: -200px;
+    z-index: 50;
+}
+.mountain-wrap .mountain-point {
+	position:absolute;
+    z-index: 100;
+}
+.mountain-wrap .mountain-point > a {
+	color:#000;
+}
+.mountain-wrap .mountain-point > a:before {
+	content:"";
+	width:20px;
+	height:20px;
+	background:#448ccb;
+	border-radius:50%;
+	border:3px solid #fff;
+	position:absolute;
+	left:-30px;
+}
+.mountain-wrap .mountain-point:hover > .mountain-point-element {
+	display:block;
+}
+.mountain-point-element {
+	width:230px;
+	display:none;
+	position:absolute;
+	top:20px;
+	left:0;
+	z-index:500;
+	background:#fff;
+	-moz-box-shadow: 0px 0px 10px 0px rgba( 0, 0, 0, 0.75 );
+	-webkit-box-shadow: 0px 0px 10px 0px rgba( 0, 0, 0, 0.75 );
+	box-shadow: 0px 0px 10px 0px rgba( 0, 0, 0, 0.75 );
+	padding:15px;
+}
+.mountain-point-element img {
+	width:100%;
+}
+.mountain-point-element h3 a {
+	color:#448ccb;
+	text-decoration:underline;
+}
+.mountain-point-element .price {
+	background:#448ccb;
+	width:100%;
+	color:#fff;
+	text-align:center;
+}
+.mountain-point-element .price span {
+	font-weight:bold;
+	font-size:22px;
+}
+.mountain-point-element .time, .mountain-point-element .path, .mountain-point-element .water, .mountain-point-element .foot {
+	position:relative;
+	margin:5px 0;
+	padding-left:30px;
+}
+.mountain-point-element .time:before, .mountain-point-element .path:before, .mountain-point-element .water:before, .mountain-point-element .foot:before {
+	position:absolute;
+	left:0px;
+	width:20px;
+	height:20px;
+}
+.mountain-point-element .time:before {
+	content: url("/images/ico-time.png");
+}
+.mountain-point-element .path:before {
+	content: url("/images/ico-path.png");
+}
+.mountain-point-element .water:before {
+	content: url("/images/ico-water.png");
+}
+.mountain-point-element .foot:before {
+	content: url("/images/ico-foot.png");
+}
+
+.find-wrap {
+	position:relative;
+}
+.find-block {
+	background:#448ccb;
+	background: -moz-linear-gradient(top, #5ea0d5 0%, #3073bb 100%);
+	background: -webkit-linear-gradient(top, #5ea0d5 0%, #3073bb 100%);
+	background: -o-linear-gradient(top, #5ea0d5 0%, #3073bb 100%);
+	background: -ms-linear-gradient(top, #5ea0d5 0%, #3073bb 100%);
+	background: linear-gradient(top, #5ea0d5 0%, #3073bb 100%);
+	-moz-box-shadow: 0px 0px 10px 0px rgba( 0, 0, 0, 0.75 );
+	-webkit-box-shadow: 0px 0px 10px 0px rgba( 0, 0, 0, 0.75 );
+	box-shadow: 0px 0px 10px 0px rgba( 0, 0, 0, 0.75 );
+	z-index:70;
+	position:relative;
+	top:-20px;
+	padding: 15px;
+	color:#fff;
+}
+.find-block-el {
+	display:inline-block;
+	position:relative;
+	height:70px;
+	vertical-align:top;
+	margin:0 10px;
+	color:#000;
+}
+.find-block .type, .find-block .time, .find-block .place {
+	position:relative;
+	margin-top:40px;
+	display:block;
+	width:245px;
+	padding:5px 8px;
+	background:#fff;
+	border:1px solid #a6a6a6;
+	height:30px;
+	z-index:300;
+	cursor:pointer;
+}
+.find-block .type:before, .find-block .time:before, .find-block .place:before {
+	position:absolute;
+	top:-30px;
+	font-size:18px;
+	color:#fff;
+}
+.find-block .type:after, .find-block .time:after, .find-block .place:after {
+	position:absolute;
+	top:0px;
+	font-size:18px;
+	color:#fff;
+	right:10px;
+	content:url("/images/ab-d.png");
+}
+.find-block .type {
+}
+.find-block .type:before {
+	content:"Вид отдыха:";
+}
+/*.find-block .time {
+	margin:40px 20px 0;
+}*/
+.find-block .time:before {
+	content:"Длительность:";
+}
+.find-block .place {
+}
+.find-block .place:before {
+	content:"География отдыха:";
+}
+.find-block input {
+	background:#1c871c;
+	text-align:center;
+	padding:5px 40px;
+	border:0;
+	display:inline-block;
+	vertical-align:bottom;
+	margin-left:30px;
+}
+.find-block .options-element__value {
+	position:relative;
+}
+.find-block .options-element__select {
+	box-shadow: 0px 5px 10px 0px rgba( 0, 0, 0, 0.75 );
+	-webkit-box-shadow: 0px 5px 10px 0px rgba( 0, 0, 0, 0.75 );
+	-moz-box-shadow: 0px 5px 10px 0px rgba( 0, 0, 0, 0.75 );
+	background: #fff;
+	position:absolute;
+	padding:0;
+	width:690px;
+	display:none;
+	top:70px;
+	left:0;
+	z-index:200;
+}
+.find-block .options-element__select[data-type="place"] {
+	right:0;
+	left:inherit;
+}
+.find-block .options-element__select li {
+	display:block;
+	float:left;
+	list-style-type:none;
+	width:25%;
+	padding:5px 10px;
+	border:1px #a6a6a6 solid;
+	background:#fff;
+	cursor:pointer;
+}
+.find-block .options-element__select li:hover {
+	color:#fff;
+	background:#448ccb;
+}
+
+
+
+
+
+
+.tour-list-block {
+	
+}
+.tour-list-element {
+	margin-bottom:30px;
+}
+.tour-list-element img {
+	width:100%;
+}
+.tour-list-element .price {
+	background:#448ccb;
+	width:100%;
+	color:#fff;
+	text-align:center;
+}
+.tour-list-element .price span {
+	font-weight:bold;
+	font-size:22px;
+}
+
+.tour-list-element .time, .tour-list-element .path, .tour-list-element .water, .tour-list-element .foot {
+	position:relative;
+	margin:5px 0;
+	padding-left:30px;
+}
+.tour-list-element .time {
+}
+.tour-list-element .path {
+}
+.tour-list-element .water {
+}
+.tour-list-element .foot {
+}
+.tour-list-element .time:before, .tour-list-element .path:before, .tour-list-element .water:before, .tour-list-element .foot:before {
+	position:absolute;
+	left:0px;
+	width:20px;
+	height:20px;
+}
+.tour-list-element .time:before {
+	content: url("/images/ico-time.png");
+}
+.tour-list-element .path:before {
+	content: url("/images/ico-path.png");
+}
+.tour-list-element .water:before {
+	content: url("/images/ico-water.png");
+}
+.tour-list-element .foot:before {
+	content: url("/images/ico-foot.png");
+}
+
+.contacts-fon {
+	background:url('/images/fon1.png') center repeat;
+	margin-top:30px;
+}
+.contacts-block {
+	padding: 15px 0;
+}
+.contacts-block .info {
+	color:#fff;
+}
+.contacts-block .info a {
+	color:#fff;
+}
+.contacts-block .info .phone, .contacts-block .info .skype, .contacts-block .info .email, .contacts-block .info .icq {
+	position:relative;
+	padding-left:60px;
+	margin:10px 0;
+	font-size:34px;
+}
+.contacts-block .info .phone {
+}
+.contacts-block .info .skype {
+}
+.contacts-block .info .email {
+}
+.contacts-block .info .icq {
+}
+
+.contacts-block .info .phone:before, .contacts-block .info .skype:before, .contacts-block .info .email:before, .contacts-block .info .icq:before {
+	position:absolute;
+	left:0px;
+	width:40px;
+	height:40px;
+}
+.contacts-block .info .phone:before {
+	content: url("/images/ico-phone.png");
+}
+.contacts-block .info .skype:before {
+	content: url("/images/ico-skype.png");
+}
+.contacts-block .info .email:before {
+	content: url("/images/ico-email.png");
+}
+.contacts-block .info .icq:before {
+	content: url("/images/ico-icq.png");
+}
+
+.contacts-block .form {
+}
+.contacts-block .form input {
+	width:265px;
+	margin:5px;
+	padding:10px 15px;
+	border:1px solid #a6a6a6;
+}
+.contacts-block .form input.w2 {
+	width:544px;
+}
+.contacts-block .form input[type="button"] {
+	float:right;
+	background:#448ccb;
+	color:#fff;
+	border:0;
+}
+.contacts-block .form textarea {
+	width:544px;
+	height:76px;
+	margin:5px;
+	resize:none;
+	padding:10px 15px;
+}
+
+
+
+/* ---------------- /content --------------------- */
+
+
+/* ---------------- footer ---------------------- */
+
+.hFooter {
+    clear: both;
+    height: 180px;
+}
+
+.footer-wrap {
+    background:#4b4b4b;
+    height: 180px;
+    margin: -180px auto 0;
+}
+.footer-block {
+	margin-top:20px;
+    color: #fff;
+}
+.footer-block a {
+    color: #fff;
+}
+.footer-block .menu {
+	text-align:center;
+}
+.footer-block .menu a {
+	font-size:14px;
+}
+.footer-block .copyright {
+	text-align:center;
+}
+.footer-block .copyright img {
+	width:20px;
+	height:20px;
+}
+.footer-block .info .phone, .footer-block .info .skype, .footer-block .info .email, .footer-block .info .icq {
+	position:relative;
+	padding-left:30px;
+	margin:10px 0;
+}
+.footer-block .info .phone {
+}
+.footer-block .info .skype {
+}
+.footer-block .info .email {
+}
+.footer-block .info .icq {
+}
+.footer-block .info .phone:before, .footer-block .info .skype:before, .footer-block .info .email:before, .footer-block .info .icq:before {
+	position:absolute;
+	width:20px;
+	height:20px;
+	content:"";
+	left:0;
+}
+.footer-block .info .phone:before {
+	background:url('/images/ico-phone.png');
+	background-size:cover;
+}
+.footer-block .info .skype:before {
+	background:url('/images/ico-skype.png');
+	background-size:cover;
+}
+.footer-block .info .email:before {
+	background:url('/images/ico-email.png');
+	background-size:cover;
+}
+.footer-block .info .icq:before {
+	background:url('/images/ico-icq.png');
+	background-size:cover;
+}
+
+.footer-block .find {
+	text-align:right;
+}
+.footer-block .find input {
+	color:#000;
+	background:#fff url('/images/ico-find.png')  95% center no-repeat;
+	border:1px solid #a6a6a6;
+	padding:3px 5px;
+	margin-bottom:15px;
+	width:100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------- /footer --------------------- */
