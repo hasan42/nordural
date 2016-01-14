@@ -15,10 +15,12 @@ h2 {
 	font-size:24px;
 	font-weight:400;
 	text-align:left;
+	margin-top:0;
 }
 h3 {
 	font-size:18px;
 	font-weight:400;
+	margin-top:0;
 }
 h1 a span, h2 a span, h3 a span {
 	text-transform:uppercase;
@@ -27,6 +29,10 @@ h1 a span, h2 a span, h3 a span {
 a {
 	color:#448ccb;
 	text-decoration:underline;
+}
+article {
+	margin: 0 auto;
+    min-height: 100%;
 }
 /* ---------------- ------- --------------------- */
 
@@ -374,6 +380,9 @@ a {
 	padding: 15px;
 	color:#fff;
 }
+.find-block h2 {
+	text-align:center;
+}
 .find-block-el {
 	display:inline-block;
 	position:relative;
@@ -493,10 +502,14 @@ a {
 	font-size:22px;
 }
 
-.tour-list-element .time, .tour-list-element .path, .tour-list-element .water, .tour-list-element .foot {
+.tour-list-element .place, .tour-list-element .type, .tour-list-element .time, .tour-list-element .path, .tour-list-element .water, .tour-list-element .foot {
 	position:relative;
 	margin:5px 0;
 	padding-left:30px;
+}
+.tour-list-element .place {
+}
+.tour-list-element .type{
 }
 .tour-list-element .time {
 }
@@ -506,11 +519,17 @@ a {
 }
 .tour-list-element .foot {
 }
-.tour-list-element .time:before, .tour-list-element .path:before, .tour-list-element .water:before, .tour-list-element .foot:before {
+.tour-list-element .place:before, .tour-list-element .type:before, .tour-list-element .time:before, .tour-list-element .path:before, .tour-list-element .water:before, .tour-list-element .foot:before {
 	position:absolute;
 	left:0px;
 	width:20px;
 	height:20px;
+}
+.tour-list-element .place:before {
+	content: url("/images/ico-place.png");
+}
+.tour-list-element .type:before {
+	content: url("/images/ico-type.png");
 }
 .tour-list-element .time:before {
 	content: url("/images/ico-time.png");
@@ -610,6 +629,23 @@ a {
 .image-gallery li a {}
 .image-gallery li a img {
 	height:100px;
+}
+
+.pagination {
+	margin:0 auto 40px;
+	text-align:center;
+	display: table;
+}
+.pagination li {
+	
+}
+.pagination li a {
+	border:0;
+	color:#000;
+	font-size:14px;
+}
+.pagination li.active a {
+	background:#448ccb;
 }
 
 /* ---------------- /content --------------------- */
