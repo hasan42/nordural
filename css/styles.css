@@ -648,6 +648,196 @@ article {
 	background:#448ccb;
 }
 
+.tour-head-info {}
+.tour-head-info .info {
+	display:inline-block;
+	width:340px;
+	vertical-align:top;
+}
+.tour-head-info .info .price {
+	background:#448ccb;
+	width:100%;
+	color:#fff;
+	text-align:center;
+	margin:20px 0;
+	font-size:24px;
+	display:inline-block;
+}
+.tour-head-info .info .price span {
+	font-weight:bold;
+	font-size:32px;
+}
+.tour-head-info .info .icon-info {
+	display:inline-block;
+}
+.tour-head-info .info .place, .tour-head-info .info .type, .tour-head-info .info .time, .tour-head-info .info .path, .tour-head-info .info .water, .tour-head-info .info .foot {
+	position:relative;
+	margin:5px 0;
+	padding-left:30px;
+}
+.tour-head-info .info .place:before, .tour-head-info .info .type:before, .tour-head-info .info .time:before, .tour-head-info .info .path:before, .tour-head-info .info .water:before, .tour-head-info .info .foot:before {
+	position:absolute;
+	left:0px;
+	width:20px;
+	height:20px;
+}
+.tour-head-info .info .place:before {
+	content: url("/images/ico-place.png");
+}
+.tour-head-info .info .type:before {
+	content: url("/images/ico-type.png");
+}
+.tour-head-info .info .time:before {
+	content: url("/images/ico-time.png");
+}
+.tour-head-info .info .path:before {
+	content: url("/images/ico-path.png");
+}
+.tour-head-info .info .water:before {
+	content: url("/images/ico-water.png");
+}
+.tour-head-info .info .foot:before {
+	content: url("/images/ico-foot.png");
+}
+
+.tour-head-info .info .weather-block {
+	display:block;
+	font-size:32px;
+}
+.tour-head-info .info .weather-block div {
+	display:inline-block;
+	width:23%;
+	text-align:center;
+	vertical-align:bottom;
+}
+.tour-head-info .info .weather-block div:first-child {
+	text-align:left;
+}
+.tour-head-info .info .weather-block div:nth-child(3) {
+	
+}
+.tour-head-info .info .weather-block span {
+	font-size:20px;
+}
+
+.tour-head-info .image {
+	display:inline-block;
+	margin-right:20px;
+	vertical-align:top;
+}
+.tour-head-info .image img {
+	width:600px;
+}
+
+
+.tour-prog {}
+.tour-prog .nav-tabs {
+	border:0;
+}
+.tour-prog .nav-tabs li {}
+.tour-prog .nav-tabs li a {
+	border:0;
+	color:#000;
+	text-decoration:none;
+	font-size:18px;
+	padding:6px 12px;
+	border-radius:0;
+}
+.tour-prog .nav-tabs li a:focus {
+	outline:0;
+	border:0;
+}
+.tour-prog .nav-tabs li.active {}
+.tour-prog .nav-tabs li.active a {
+	color:#fff;
+	background:#448ccb;
+}
+.tour-prog {}
+.tour-prog .tab-content {}
+.tour-prog .tab-pane {}
+.tour-prog .tour-prog-line {
+	position:relative;
+	margin:20px 0;
+}
+.tour-prog .tour-prog-line:before {
+	position:absolute;
+	content:"";
+	width:1px;
+	height:100%;
+	background:#448ccb;
+	top:0;
+	left:50%;
+}
+.tour-prog .tour-prog-line .tour-prog-line-element {
+	position:relative;
+	display:block;
+	padding:10px 0;
+}
+.tour-prog .tour-prog-line .tour-prog-line-element::before {
+	position:absolute;
+	content:"";
+	width:40px;
+	height:1px;
+	background:#448ccb;
+	top:30px;
+	left:49%;
+}
+.tour-prog .tour-prog-line .tour-prog-line-element:nth-child(2n) {
+
+}
+.tour-prog .tour-prog-line .tour-prog-line-element:nth-child(2n)::before {
+	right:49%;
+	left:inherit;
+}
+.tour-prog .tour-prog-line .tour-prog-line-element:last-child {
+	padding:10px 0 20px;
+}
+
+.tour-prog .tour-prog-line .tour-prog-line-element .info1 {
+	display:inline-block;
+	width:45%;
+	margin-right:100px;
+	vertical-align:top;
+}
+.tour-prog .tour-prog-line .tour-prog-line-element .info2 {
+	display:inline-block;
+	width:40%;
+	vertical-align:top;
+}
+
+.price-block-wrap {
+	background:#448ccb;
+	background: -moz-linear-gradient(top, #5ea0d5 0%, #3073bb 100%);
+	background: -webkit-linear-gradient(top, #5ea0d5 0%, #3073bb 100%);
+	background: -o-linear-gradient(top, #5ea0d5 0%, #3073bb 100%);
+	background: -ms-linear-gradient(top, #5ea0d5 0%, #3073bb 100%);
+	background: linear-gradient(top, #5ea0d5 0%, #3073bb 100%);
+	padding:35px 0 15px;
+	margin-bottom:25px;
+}
+.price-block {
+	color:#fff;
+}
+.price-block h2 {
+	text-align:center;
+}
+.price-block table {
+	margin:20px auto;
+}
+.price-block table tr {
+	
+}
+.price-block table tr td, .price-block table tr th {
+	border:1px solid #d1d1d1;
+	padding:12px;
+	border-collapse:collapse;
+}
+.price-block table tr th {
+}
+.price-block table tr td {
+	text-align:center;
+}
+
 /* ---------------- /content --------------------- */
 
 
