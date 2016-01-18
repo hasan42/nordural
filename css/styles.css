@@ -67,7 +67,7 @@ article {
 .s-menu {
 	background:rgba(0,0,0,.7);
 	position:absolute;
-	top:40px;
+	top:36px;
 	left:0;
 	display:none;
 }
@@ -103,7 +103,7 @@ article {
 	vertical-align:top;
 	color:#fff;
 	text-align:left;
-	padding:0 20px 20px;
+	padding:10px 20px 20px;
 }
 .s-menu-act-element {
 	width:230px;
@@ -114,6 +114,9 @@ article {
 }
 .s-menu-act-element img {
 	width:100%;
+}
+.s-menu-act-element h3{
+	margin-top:10px;
 }
 .s-menu-act-element h3 a {
 	color:#448ccb;
@@ -458,9 +461,11 @@ article {
 	left:0;
 	z-index:200;
 }
+.find-block .options-element__select[data-type="time"] {
+	width:350px;
+}
 .find-block .options-element__select[data-type="place"] {
-	right:0;
-	left:inherit;
+	width:180px;
 }
 .find-block .options-element__select li {
 	display:block;
@@ -471,6 +476,12 @@ article {
 	border:1px #a6a6a6 solid;
 	background:#fff;
 	cursor:pointer;
+}
+.find-block .options-element__select[data-type="time"] li {
+	width:50%;
+}
+.find-block .options-element__select[data-type="place"] li {
+	width:100%;
 }
 .find-block .options-element__select li:hover {
 	color:#fff;
