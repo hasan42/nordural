@@ -74,6 +74,7 @@ a {
 	top:36px;
 	left:0;
 	display:none;
+	min-width:100%;
 }
 .s-menu.tour {
 	left:-300px;
@@ -469,7 +470,7 @@ a {
 	width:350px;
 }
 .find-block .options-element__select[data-type="place"] {
-	width:180px;
+	width:100%;
 }
 .find-block .options-element__select li {
 	display:block;
@@ -502,6 +503,9 @@ a {
 }
 .tour-list-element {
 	margin-bottom:30px;
+}
+.tour-list-element h3 {
+	margin-top:10px;
 }
 .tour-list-element img {
 	width:100%;
@@ -781,12 +785,12 @@ a {
 	height:100%;
 	background:#448ccb;
 	top:0;
-	left:50%;
+	left:1px;
 }
 .tour-prog .tour-prog-line .tour-prog-line-element {
 	position:relative;
 	display:block;
-	padding:10px 0;
+	padding:10px 10px 10px 40px;
 }
 .tour-prog .tour-prog-line .tour-prog-line-element::before {
 	position:absolute;
@@ -795,20 +799,19 @@ a {
 	height:1px;
 	background:#448ccb;
 	top:30px;
-	left:49%;
+	left:-10px;
 }
-.tour-prog .tour-prog-line .tour-prog-line-element:nth-child(2n) {
-
+/*.tour-prog .tour-prog-line .tour-prog-line-element:nth-child(2n) {
 }
 .tour-prog .tour-prog-line .tour-prog-line-element:nth-child(2n)::before {
 	right:49%;
 	left:inherit;
-}
+}*/
 .tour-prog .tour-prog-line .tour-prog-line-element:last-child {
-	padding:10px 0 20px;
+	padding:10px 10px 20px 40px;
 }
 
-.tour-prog .tour-prog-line .tour-prog-line-element .info1 {
+/*.tour-prog .tour-prog-line .tour-prog-line-element .info1 {
 	display:inline-block;
 	width:45%;
 	margin-right:100px;
@@ -818,7 +821,7 @@ a {
 	display:inline-block;
 	width:40%;
 	vertical-align:top;
-}
+}*/
 
 .price-block-wrap {
 	background:#448ccb;

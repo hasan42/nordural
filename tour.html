@@ -209,89 +209,142 @@
 							<li role="presentation"><a href="#9d" aria-controls="9d" role="tab" data-toggle="tab">9 день</a></li>
 							<li role="presentation"><a href="#10d" aria-controls="10d" role="tab" data-toggle="tab">10 день</a></li>
 						  </ul>
+						
+							<script>
+								ymaps.ready(init);
 
-						  <!-- Tab panes -->
-						  <div class="tab-content">
-							<div role="tabpanel" class="tab-pane fade in active" id="1d">
-								<div class="tour-prog-line">
-									<div class="tour-prog-line-element"><div class="info1"></div><div class="info2">Прибытие группы по железной дороге до города Инта.</div></div>
-									<div class="tour-prog-line-element"><div class="info1">Переезд на "Урале"-вахтовке (6-8 часов в пути) до базы "Желанная"</div><div class="info2"></div></div>
-									<div class="tour-prog-line-element"><div class="info1"></div><div class="info2">Пеший переход до ур. "Оазис" (6 км)</div></div>
-									<div class="tour-prog-line-element"><div class="info1">Ужин. Отдых</div><div class="info2"></div></div>
-								</div>
+								function init() {
+									var myMap = new ymaps.Map("map-canvas", { 
+											center: [64.861188, 61.239050], zoom: 7
+										}, {
+											searchControlProvider: 'yandex#search'
+										});
+
+									var myPolyline = new ymaps.Polyline([
+											[64.861188, 61.239050], [63.500138, 62.272267], [62.334077, 61.363845],[61.979508, 56.920295]
+										], {
+											balloonContent: "Комбинированный тур по Приполярному Уралу"
+										}, {
+											balloonCloseButton: false, strokeColor: "#448ccb", strokeWidth: 4, strokeOpacity: 1
+										});
+									
+									myMap.geoObjects.add(myPolyline);
+										
+									myMap.geoObjects
+										.add(new ymaps.Placemark([64.861188, 61.239050], {
+											balloonContent: 'Начало тура'
+										}, {
+											preset: 'islands#dotIcon', iconColor: 'green'
+										}))
+										.add(new ymaps.Placemark([63.500138, 62.272267], {
+											balloonContent: 'Середина тура'
+										}, {
+											preset: 'islands#dotIcon', iconColor: '#448ccb'
+										}))
+										.add(new ymaps.Placemark([62.334077, 61.363845], {
+											balloonContent: 'Почти окончание тура'
+										}, {
+											preset: 'islands#dotIcon', iconColor: '#448ccb'
+										}))
+										.add(new ymaps.Placemark([61.979508, 56.920295], {
+											balloonContent: 'Окончание тура'
+										}, {
+											preset: 'islands#dotIcon', iconColor: 'red'
+										}));
+								}
+							</script>
+						
+						  <div class="row">
+							<div class="col-xs-12 col-md-6">
+								<div id="map-canvas" style="height:500px; margin:10px 0;"></div>
 							</div>
-							<div role="tabpanel" class="tab-pane fade" id="2d">
-								<div class="tour-prog-line">
-									<div class="tour-prog-line-element"><div class="info1"></div><div class="info2">Завтрак</div></div>
-									<div class="tour-prog-line-element"><div class="info1">Пеший переход до озера Восьмерка (15 км)</div><div class="info2"></div></div>
-									<div class="tour-prog-line-element"><div class="info1"></div><div class="info2">Ужин. Отдых</div></div>
-								</div>
-							</div>
-							<div role="tabpanel" class="tab-pane fade" id="3d">
-								<div class="tour-prog-line">
-									<div class="tour-prog-line-element"><div class="info1"></div><div class="info2">Завтрак</div></div>
-									<div class="tour-prog-line-element"><div class="info1">Восхождение (12 км) на г. Народа или Народная (1895 м).</div><div class="info2"></div></div>
-									<div class="tour-prog-line-element"><div class="info1"></div><div class="info2">Переход через перевал Кар-Кар до приюта "Олений" (18 км)</div></div>
-									<div class="tour-prog-line-element"><div class="info1">Ужин. Отдых.</div><div class="info2"></div></div>
-								</div>
-							</div>
-							<div role="tabpanel" class="tab-pane fade" id="4d">
-								<div class="tour-prog-line">
-									<div class="tour-prog-line-element"><div class="info1"></div><div class="info2">Завтрак</div></div>
-									<div class="tour-prog-line-element"><div class="info1">Пеший переход до приюта Манарага (12 км)</div><div class="info2"></div></div>
-									<div class="tour-prog-line-element"><div class="info1"></div><div class="info2">Ужин. Отдых.</div></div>
-								</div>
-							</div>
-							<div role="tabpanel" class="tab-pane fade" id="5d">
-								<div class="tour-prog-line">
-									<div class="tour-prog-line-element"><div class="info1"></div><div class="info2">Завтрак. </div></div>
-									<div class="tour-prog-line-element"><div class="info1">Пеший переход (12 км) и восхождение на гору Манарага (12 км)</div><div class="info2"></div></div>
-									<div class="tour-prog-line-element"><div class="info1"></div><div class="info2">Ужин. Отдых</div></div>
-								</div>
-							</div>
-							<div role="tabpanel" class="tab-pane fade" id="6d">
-								<div class="tour-prog-line">
-									<div class="tour-prog-line-element"><div class="info1"></div><div class="info2">Завтрак</div></div>
-									<div class="tour-prog-line-element"><div class="info1">Сбор катамаранов и других сплавсредств</div><div class="info2"></div></div>
-									<div class="tour-prog-line-element"><div class="info1"></div><div class="info2">Сплав (16 км) до приюта Бани</div></div>
-									<div class="tour-prog-line-element"><div class="info1">Фотосессии.</div><div class="info2"><img src="/images/tour1.jpg" border="0"></div></div>
-									<div class="tour-prog-line-element"><div class="info1"></div><div class="info2">Баня.</div></div>
-									<div class="tour-prog-line-element"><div class="info1">Ужин. Отдых. </div><div class="info2"></div></div>
-								</div>
-							</div>
-							<div role="tabpanel" class="tab-pane fade" id="7d">
-								<div class="tour-prog-line">
-									<div class="tour-prog-line-element"><div class="info1"></div><div class="info2">Завтрак</div></div>
-									<div class="tour-prog-line-element"><div class="info1">Сплав по реке Косью</div><div class="info2"></div></div>
-									<div class="tour-prog-line-element"><div class="info1"></div><div class="info2">Ужин. Отдых</div></div>
-								</div>
-							</div>
-							<div role="tabpanel" class="tab-pane fade" id="8d">
-								<div class="tour-prog-line">
-									<div class="tour-prog-line-element"><div class="info1"></div><div class="info2">Завтрак</div></div>
-									<div class="tour-prog-line-element"><div class="info1">Сплав по реке Косью</div><div class="info2"></div></div>
-									<div class="tour-prog-line-element"><div class="info1"></div><div class="info2">Прохождение небольших порогов "Белая лошадь", "Трек", "Безгиль"</div></div>
-									<div class="tour-prog-line-element"><div class="info1">Ужин. Отдых</div><div class="info2"></div></div>
-								</div>
-							</div>
-							<div role="tabpanel" class="tab-pane fade" id="9d">
-								<div class="tour-prog-line">
-									<div class="tour-prog-line-element"><div class="info1"></div><div class="info2">Завтрак</div></div>
-									<div class="tour-prog-line-element"><div class="info1">Сплав по реке Косью.</div><div class="info2"></div></div>
-									<div class="tour-prog-line-element"><div class="info1"></div><div class="info2">Посещение избы староверов в Вангырвом</div></div>
-									<div class="tour-prog-line-element"><div class="info1">Ужин. Отдых</div><div class="info2"></div></div>
-								</div>
-							</div>
-							<div role="tabpanel" class="tab-pane fade" id="10d">
-								<div class="tour-prog-line">
-									<div class="tour-prog-line-element"><div class="info1"></div><div class="info2">Завтрак</div></div>
-									<div class="tour-prog-line-element"><div class="info1">Сплав по реке Косью до ж/д-станции "Косью".</div><div class="info2"></div></div>
-									<div class="tour-prog-line-element"><div class="info1"></div><div class="info2">Переезд на пригородном поезде до г. Инта. Некоторые могут сразу со станции "Косью" уехать в сторону Печоры и Ухты, т.е. не возвращаться в Инту.</div></div>
-									<div class="tour-prog-line-element"><div class="info1">Ужин (возможен в виде перекуса)</div><div class="info2"></div></div>
-									<div class="tour-prog-line-element"><div class="info1"></div><div class="info2">Отправление на поезде домой.</div></div>
-								</div>
+							<div class="col-xs-12 col-md-6">
+								<!-- Tab panes -->
+								  <div class="tab-content">
+									<div role="tabpanel" class="tab-pane fade in active" id="1d">
+										<div class="tour-prog-line">
+											<div class="tour-prog-line-element">Прибытие группы по железной дороге до города Инта.</div>
+											<div class="tour-prog-line-element">Переезд на "Урале"-вахтовке (6-8 часов в пути) до базы "Желанная"</div>
+											<div class="tour-prog-line-element">Пеший переход до ур. "Оазис" (6 км)</div>
+											<div class="tour-prog-line-element">Ужин. Отдых</div>
+										</div>
+									</div>
+									<div role="tabpanel" class="tab-pane fade" id="2d">
+										<div class="tour-prog-line">
+											<div class="tour-prog-line-element">Завтрак</div>
+											<div class="tour-prog-line-element">Пеший переход до озера Восьмерка (15 км)</div>
+											<div class="tour-prog-line-element">Ужин. Отдых</div>
+										</div>
+									</div>
+									<div role="tabpanel" class="tab-pane fade" id="3d">
+										<div class="tour-prog-line">
+											<div class="tour-prog-line-element">Завтрак</div>
+											<div class="tour-prog-line-element">Восхождение (12 км) на г. Народа или Народная (1895 м).</div>
+											<div class="tour-prog-line-element">Переход через перевал Кар-Кар до приюта "Олений" (18 км)</div>
+											<div class="tour-prog-line-element">Ужин. Отдых.</div>
+										</div>
+									</div>
+									<div role="tabpanel" class="tab-pane fade" id="4d">
+										<div class="tour-prog-line">
+											<div class="tour-prog-line-element">Завтрак</div>
+											<div class="tour-prog-line-element">Пеший переход до приюта Манарага (12 км)</div>
+											<div class="tour-prog-line-element">Ужин. Отдых.</div>
+										</div>
+									</div>
+									<div role="tabpanel" class="tab-pane fade" id="5d">
+										<div class="tour-prog-line">
+											<div class="tour-prog-line-element">Завтрак.</div>
+											<div class="tour-prog-line-element">Пеший переход (12 км) и восхождение на гору Манарага (12 км)</div>
+											<div class="tour-prog-line-element">Ужин. Отдых</div>
+										</div>
+									</div>
+									<div role="tabpanel" class="tab-pane fade" id="6d">
+										<div class="tour-prog-line">
+											<div class="tour-prog-line-element">Завтрак</div>
+											<div class="tour-prog-line-element">Сбор катамаранов и других сплавсредств</div>
+											<div class="tour-prog-line-element">Сплав (16 км) до приюта Бани</div>
+											<div class="tour-prog-line-element">Фотосессии.<BR><img src="/images/tour1.jpg" border="0"></div>
+											<div class="tour-prog-line-element">Баня.</div>
+											<div class="tour-prog-line-element">Ужин. Отдых.</div>
+										</div>
+									</div>
+									<div role="tabpanel" class="tab-pane fade" id="7d">
+										<div class="tour-prog-line">
+											<div class="tour-prog-line-element">Завтрак</div>
+											<div class="tour-prog-line-element">Сплав по реке Косью</div>
+											<div class="tour-prog-line-element">Ужин. Отдых</div>
+										</div>
+									</div>
+									<div role="tabpanel" class="tab-pane fade" id="8d">
+										<div class="tour-prog-line">
+											<div class="tour-prog-line-element">Завтрак</div>
+											<div class="tour-prog-line-element">Сплав по реке Косью</div>
+											<div class="tour-prog-line-element">Прохождение небольших порогов "Белая лошадь", "Трек", "Безгиль"</div>
+											<div class="tour-prog-line-element">Ужин. Отдых</div>
+										</div>
+									</div>
+									<div role="tabpanel" class="tab-pane fade" id="9d">
+										<div class="tour-prog-line">
+											<div class="tour-prog-line-element">Завтрак</div>
+											<div class="tour-prog-line-element">Сплав по реке Косью.</div>
+											<div class="tour-prog-line-element">Посещение избы староверов в Вангырвом</div>
+											<div class="tour-prog-line-element">Ужин. Отдых</div>
+										</div>
+									</div>
+									<div role="tabpanel" class="tab-pane fade" id="10d">
+										<div class="tour-prog-line">
+											<div class="tour-prog-line-element">Завтрак</div>
+											<div class="tour-prog-line-element">Сплав по реке Косью до ж/д-станции "Косью".</div>
+											<div class="tour-prog-line-element">Переезд на пригородном поезде до г. Инта. Некоторые могут сразу со станции "Косью" уехать в сторону Печоры и Ухты, т.е. не возвращаться в Инту.</div>
+											<div class="tour-prog-line-element">Ужин (возможен в виде перекуса)</div>
+											<div class="tour-prog-line-element">Отправление на поезде домой.</div>
+										</div>
+									</div>
+								  </div>
 							</div>
 						  </div>
+						  
+						  
 
 						</div>
 						
@@ -301,51 +354,9 @@
 			</div>
 		</section>
 		
-		<script>
-			ymaps.ready(init);
-
-			function init() {
-				var myMap = new ymaps.Map("map-canvas", { 
-						center: [64.861188, 61.239050], zoom: 7
-					}, {
-						searchControlProvider: 'yandex#search'
-					});
-
-				var myPolyline = new ymaps.Polyline([
-						[64.861188, 61.239050], [63.500138, 62.272267], [62.334077, 61.363845],[61.979508, 56.920295]
-					], {
-						balloonContent: "Комбинированный тур по Приполярному Уралу"
-					}, {
-						balloonCloseButton: false, strokeColor: "#448ccb", strokeWidth: 4, strokeOpacity: 1
-					});
-				
-				myMap.geoObjects.add(myPolyline);
-					
-				myMap.geoObjects
-					.add(new ymaps.Placemark([64.861188, 61.239050], {
-						balloonContent: 'Начало тура'
-					}, {
-						preset: 'islands#dotIcon', iconColor: 'green'
-					}))
-					.add(new ymaps.Placemark([63.500138, 62.272267], {
-						balloonContent: 'Середина тура'
-					}, {
-						preset: 'islands#dotIcon', iconColor: '#448ccb'
-					}))
-					.add(new ymaps.Placemark([62.334077, 61.363845], {
-						balloonContent: 'Почти окончание тура'
-					}, {
-						preset: 'islands#dotIcon', iconColor: '#448ccb'
-					}))
-					.add(new ymaps.Placemark([61.979508, 56.920295], {
-						balloonContent: 'Окончание тура'
-					}, {
-						preset: 'islands#dotIcon', iconColor: 'red'
-					}));
-			}
-        </script>
 		
-		<div id="map-canvas" style="height:500px;"></div>
+		
+		
 
 		<div class="price-block-wrap">
 			<section>
