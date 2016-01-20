@@ -293,6 +293,12 @@ a {
     position: relative;
     top: -200px;
     z-index: 50;
+	width:100%;
+}
+.mountain-block {
+	width:1000px;
+	margin:0 auto;
+    position: relative;
 }
 .mountain-wrap .mountain-point {
 	position:absolute;
@@ -366,6 +372,12 @@ a {
 }
 .mountain-point-element .foot:before {
 	content: url("/images/ico-foot.png");
+}
+
+@media screen and (max-width: 1000px) {
+	.mountain-wrap {
+		display:none;
+	}
 }
 
 .find-wrap {
@@ -502,7 +514,10 @@ a {
 	
 }
 .tour-list-element {
-	margin-bottom:30px;
+	display: inline-block;
+    float: inherit;
+    margin: 0 -2px 30px;
+    vertical-align: top;
 }
 .tour-list-element h3 {
 	margin-top:10px;
@@ -619,7 +634,9 @@ a {
 	border:1px solid #a6a6a6;
 }
 .contacts-block .form input.w2 {
-	width:544px;
+	max-width:544px;
+	width:100%;
+	min-width:265px;
 }
 .contacts-block .form input[type="button"] {
 	float:right;
@@ -628,7 +645,9 @@ a {
 	border:0;
 }
 .contacts-block .form textarea {
-	width:544px;
+	max-width:544px;
+	width:100%;
+	min-width:265px;
 	height:76px;
 	margin:5px;
 	resize:none;
@@ -868,7 +887,7 @@ a {
 
 .footer-wrap {
     background:#4b4b4b;
-    height: 180px;
+    min-height: 180px;
     margin: -180px auto 0;
 }
 .footer-block {
