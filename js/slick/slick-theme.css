@@ -134,6 +134,13 @@
 
     text-align: center;
 }
+
+@media screen and (max-width: 1000px) {
+	.slick-dots {
+		bottom: 15px;
+	}
+}
+
 .slick-dots li
 {
     position: relative;

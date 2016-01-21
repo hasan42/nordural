@@ -44,11 +44,17 @@ a {
 /* ---------------- header ---------------------- */
 
 .header-wrap {
+	width:100%;
+	padding-top:15px;
+	background:#000 url('/images/fon-menu.jpg') center repeat;
+	position: relative;
+    z-index: 50000;
+}
+.header-wrap.no-bg {
+	background:transparent;
 	position:absolute;
 	top:0;
 	z-index:100;
-	width:100%;
-	padding-top:15px;
 }
 .menu {
 	padding:0;
@@ -285,6 +291,13 @@ a {
 }
 
 
+@media screen and (max-width: 1000px) {
+	.banner-element .info {
+		padding-top: 280px;
+	}
+}
+
+
 
 .mountain-wrap {
 	background:url('/images/mountain.png') center repeat-x;
@@ -504,6 +517,11 @@ a {
 	color:#fff;
 	background:#448ccb;
 }
+@media screen and (max-width: 450px) {
+	.find-block input[type="button"] {
+		margin-top:20px;
+	}
+}
 
 
 
@@ -587,6 +605,7 @@ a {
 }
 .contacts-block .info {
 	color:#fff;
+	margin-bottom:20px;
 }
 .contacts-block .info a {
 	color:#fff;
@@ -652,6 +671,17 @@ a {
 	margin:5px;
 	resize:none;
 	padding:10px 15px;
+}
+
+@media screen and (max-width: 585px) {
+	.contacts-block .form input {
+		max-width: 544px;
+		min-width: 265px;
+		width: 100%;
+	}
+	.contacts-block .form input[type="button"] {
+		float:inherit;
+	}
 }
 
 .image-gallery {
