@@ -797,7 +797,8 @@ a {
 	vertical-align:top;
 }
 .tour-head-info .image img {
-	width:600px;
+	max-width:600px;
+	width:100%;
 }
 
 
@@ -894,6 +895,12 @@ a {
 .price-block table {
 	margin:20px auto;
 }
+.price-block table.hor {
+	display:table;
+}
+.price-block table.vert {
+	display:none;
+}
 .price-block table tr {
 	
 }
@@ -906,6 +913,14 @@ a {
 }
 .price-block table tr td {
 	text-align:center;
+}
+@media screen and (max-width: 700px) {
+	.price-block table.hor {
+		display:none;
+	}
+	.price-block table.vert {
+		display:table;
+	}
 }
 
 /* ---------------- /content --------------------- */
